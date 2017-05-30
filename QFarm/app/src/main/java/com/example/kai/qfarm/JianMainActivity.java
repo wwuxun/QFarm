@@ -23,13 +23,14 @@ public class JianMainActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(JianMainActivity.this,ShujuMainActivity.class);
-        startActiviy(intent);
-    }
+        switch(v.getId()){
+            case R.id.Button:  Intent intent = new Intent(JianMainActivity.this,ShujuMainActivity.class);
+                startActivity(intent) ;break;
+            case R.id.button2:
+                intent = new Intent(JianMainActivity.this, KongMainActivity.class);
+                startActivity(intent) ;break;
+        }
 
-    public void onClick(View V) {
-        Intent intent = new Intent(JianMainActivity.this,KongMainActivity.class);
-        startActiviy(intent);
     }
 
 }
